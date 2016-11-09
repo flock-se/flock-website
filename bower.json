@@ -1,0 +1,27 @@
+{
+  "name": "flock-website",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Start Bootstrap"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  },
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "fullpage.js": "^2.8.8",
+    "magnific-popup": "^1.1.0",
+    "scrollreveal": "^3.3.2"
+  }
+}
