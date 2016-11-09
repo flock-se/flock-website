@@ -1,15 +1,11 @@
 {
   "name": "flock-website",
-  "title": "Creative",
-  "version": "3.3.7+1",
+  "title": "Flock.",
+  "version": "0.0.1",
   "author": "Flock.",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
-  },
   "scripts": {
-    "postinstall": "bower install",
-    "start": "node ./src/run.js"
+    "postinstall": "./node_modules/bower install",
+    "start": "node ./server.js"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -25,8 +21,7 @@
     "magnific-popup": "^1.1.0",
     "scrollreveal": "^3.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+  "dependencies": {
+    "bower": "^1.8.0"
   }
 }
