@@ -3,6 +3,7 @@
   "title": "Flock.",
   "version": "0.0.1",
   "author": "Flock.",
+  "main": "./server.js",
   "scripts": {
     "postinstall": "node ./node_modules/.bin/bower install",
     "start": "node ./server.js"
