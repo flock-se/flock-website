@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Flock.",
   "scripts": {
-    "postinstall": "./node_modules/bower install",
+    "postinstall": "node ./node_modules/.bin/bower install",
     "start": "node ./server.js"
   },
   "devDependencies": {
