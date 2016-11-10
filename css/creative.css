@@ -153,16 +153,16 @@ aside {
 video#bg {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 25%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
   z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-25%) translateY(-50%);
+  -moz-transform: translateX(-25%) translateY(-50%);
+  -webkit-transform: translateX(-25%) translateY(-50%);
+  transform: translateX(-25%) translateY(-50%);
   background-size: cover;
 }
 
