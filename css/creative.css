@@ -41,6 +41,9 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+.bg-default {
+  background-color: #eeeeee;
+}
 .bg-primary {
   background-color: #FEE200;
 }
