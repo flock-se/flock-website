@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var gutil = require( 'gulp-util' );
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var ftp = require( 'vinyl-ftp' );
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -95,4 +97,19 @@ gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+});
+
+gulp.task('ftp', function () {
+
+    var conn = ftp.create( {
+        host:     'flock-se.com',
+        user:     '*',
+        password: '*',
+        parallel: 10,
+        log:      gutil.log
+    } );
+
+    return gulp.src(['index.html', 'css/creative.min.css', 'js/creative.min.js', 'bower_components/**', 'images/**'], { base: '.', buffer: false })
+        .pipe( conn.newer( '/public_html' ) )
+        .pipe( conn.dest( '/public_html' ) );
 });
