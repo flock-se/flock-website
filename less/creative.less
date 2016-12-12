@@ -55,16 +55,29 @@ p {
 
 .bg-primary {
     background-color: @theme-primary;
+    color: @gray-darker;
+    .text-faded {
+        color: fade( @gray-darker, 90%);
+    }
+    a {
+        .transition-all;
+        color: @gray-darker;
+        &:hover,
+        &:focus {
+            color: darken(@gray-darker, 10%);
+        }
+    }
 }
 
 .bg-dark {
     background-color: @gray-darker;
     color: white;
+    .text-faded {
+        color: fade( white, 90%);
+    }
 }
 
-.text-faded {
-    color: fade(white, 90%);
-}
+
 
 section {
     padding: 100px 0;
@@ -381,4 +394,25 @@ video#bg {
     -webkit-transform: translateX(-25%) translateY(-50%);
     transform: translateX(-25%) translateY(-50%);
     background-size: cover;
+}
+
+/*
+ * Flock
+ */
+
+.flock-events {
+    .media-left{
+
+        a {
+            display: block;
+            width: 64px;
+            height: 64px;
+            padding:5px;
+            background-color: white;
+            img.media-object {
+                width: 100%;
+            }
+        }
+    }
+
 }

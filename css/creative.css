@@ -49,12 +49,26 @@ p {
 }
 .bg-primary {
   background-color: #FEE200;
+  color: #222222;
+}
+.bg-primary .text-faded {
+  color: rgba(34, 34, 34, 0.9);
+}
+.bg-primary a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #222222;
+}
+.bg-primary a:hover,
+.bg-primary a:focus {
+  color: #090909;
 }
 .bg-dark {
   background-color: #222222;
   color: white;
 }
-.text-faded {
+.bg-dark .text-faded {
   color: rgba(255, 255, 255, 0.9);
 }
 section {
@@ -433,4 +447,17 @@ video#bg {
   -webkit-transform: translateX(-25%) translateY(-50%);
   transform: translateX(-25%) translateY(-50%);
   background-size: cover;
+}
+/*
+ * Flock
+ */
+.flock-events .media-left a {
+  display: block;
+  width: 64px;
+  height: 64px;
+  padding: 5px;
+  background-color: white;
+}
+.flock-events .media-left a img.media-object {
+  width: 100%;
 }
