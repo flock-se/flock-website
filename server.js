@@ -7,5 +7,5 @@ var app = express();
 app.use(express.static(__dirname));
 
 app.listen(port, function () {
-    console.log('Server started');
+    console.log('Server started @ localhost:' + port);
 });
